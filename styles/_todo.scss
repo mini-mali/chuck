@@ -145,3 +145,21 @@
 }
 
 
+
+
+
+h1 {
+  position: fixed;
+  top: 1rem;
+  right: 3rem;
+  z-index: 2;
+
+  font-family: monospace;
+  font-size: 1rem;
+  text-align: center;
+}
+
+
+html {
+  background-image: url('https://marcodonoghue.files.wordpress.com/2012/05/princeofpersia-level01.png');
+}
