@@ -1,0 +1,147 @@
+.canvas {
+  position: relative;
+
+  background: green;
+}
+
+
+
+
+.car__wheel {
+  animation-name: a--move-up-and-down;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+
+
+
+.car__body {
+  animation-name: a--move-up-and-down;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-delay: .5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+
+
+
+
+.car-outlet {
+  position: absolute;
+  bottom: 20%;
+  left: 30%;
+  z-index: 2;
+
+  transform: rotateY(180deg);
+  transition: all 50ms ease-in;
+
+  &.change-direction {
+    transform: rotateY(0);
+  }
+}
+
+
+
+.car {
+  &__body {
+    position: relative;
+    padding: 1rem;
+
+    width: 396px;
+    height: 190px;
+
+    background: $car;
+    border: 2px solid darken($car, 10%);
+
+    border-radius: 11px;
+    border-top-left-radius: 111px;
+  }
+
+  &__window {
+    &--front {
+      display: inline-block;
+
+      width: 8rem;
+      height: 6rem;
+      margin-right: 1rem;
+
+      background: $white url('https://m.actve.net/evropa2/2018/09/foto-web-detail-440x355px-chuckn.png') 50% 50% no-repeat;
+      background-size: contain;
+
+      border-radius: 11px;
+      border-top-left-radius: 111px;
+    }
+
+    &--back {
+      display: inline-block;
+
+      width: 5.8rem;
+      height: 6rem;
+      &:not(:last-child) { margin-right: 1rem; }
+
+      background: $white;
+      border-radius: 11px;
+
+      opacity: .7;
+    }
+  }
+
+  &__chassis {
+    position: relative;
+    top: -3rem;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+}
+
+
+
+.car__wheel-outer {
+  position: relative;
+
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100px;
+    height: 44px;
+    background: darken($car, 5%);
+
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+  }
+
+  //&--A {}
+  //&--B {}
+}
+
+
+
+
+
+//
+// SCORE
+//
+#score {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  z-index: 1;
+
+  font-family: monospace;
+  font-size: 2rem;
+}
+
+

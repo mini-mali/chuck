@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chuck in the van</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./app.scss">
+
+</head>
+<body>
+    <!-- Two instances of same SVG -->
+    <section
+        class="car-outlet"
+        id="car"
+        style="bottom: 20%; left: 10%;">
+        <div class="car">
+            <div class="car__body">
+                <div class="car__window--front"></div>
+                <div class="car__window--back"></div>
+                <div class="car__window--back"></div>
+            </div>
+        </div>
+        <div class="car__chassis">
+            <div class="car__wheel-outer car__wheel-outer--A">
+                <svg viewBox="0 0 100 100" class="car__wheel car__wheel--A">
+                    <use xlink:href="#car__wheel"></use>
+                </svg>
+            </div>
+            <div class="car__wheel-outer car__wheel-outer--B">
+                <svg viewBox="0 0 100 100" class="car__wheel car__wheel--B">
+                    <use xlink:href="#car__wheel"></use>
+                </svg>
+            </div>
+        </div>
+
+        <!-- SVG source -->
+        <svg style="display: none;">
+            <defs>
+                <symbol id="car__wheel" viewBox="0 0 100 100">
+                    <circle class="outer" cx="50" cy="50" r="40"></circle>
+                    <circle class="inner" cx="50" cy="50" r="15"></circle>
+                </symbol>
+            </defs>
+        </svg>
+    </section>
+
+
+    <section class="environment">
+        <div class="mountain"></div>
+        <div class="mountain"></div>
+        <div class="sun">☀️</div>
+    </section>
+    <div class="road">
+        <div class="road__guide-line"></div>
+    </div>
+    <div class="earth">
+        <div class="coffin">⚰️</div>
+    </div>
+
+
+    <div id="score">00000</div>
+  <script src="./app.js"></script>
+</body>
+</html>

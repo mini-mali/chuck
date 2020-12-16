@@ -1,0 +1,13 @@
+//
+//  Animations
+//
+@keyframes road__guide-line {
+  100% { left: -400%; }
+}
+
+
+// pattern:  name | duration | timing function | delay | iteration count | direction
+.a-road__guide-line {
+  animation: road__guide-line $road-guide-line--speed linear 0s infinite;
+  //animation-direction: reverse;
+}

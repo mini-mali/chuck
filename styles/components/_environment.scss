@@ -1,0 +1,132 @@
+.environment {
+  position: relative;
+  //top: -272px;
+  z-index: 1;
+
+  width: 100%;
+  height: 60%;
+  overflow: hidden;
+
+  clear: both;
+
+  background-color: $sky;
+  background: linear-gradient(to bottom, #90dffe 0%, #38a3d1 100%);
+
+  /*
+  // clouds pattern
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: .3;
+
+    background-image: url("http://static.colourlovers.com/images/patterns/3588/3588571.png?1367254584");
+  }
+  */
+}
+
+
+
+.mountain {
+  display: inline-block;
+  position: absolute;
+  bottom: -5.5rem;
+  z-index: 2;
+
+  background: $mountain;
+  border-top-right-radius: 1rem;
+  border: 1px solid darken($t-crystal, 20%);
+
+  transform: rotate(-45deg);
+
+
+  &:nth-child(1) {
+    width: 10rem;
+    height: 10rem;
+    margin-left: 4rem;
+  }
+
+  &:nth-child(2) {
+    width: 7rem;
+    height: 7rem;
+    margin-left: 1rem;
+  }
+}
+
+
+
+.road {
+  //display: flex;
+  //align-items: center;
+
+  overflow: hidden;
+
+  width: 100%;
+  height: 20%;
+
+  background: $road;
+  border-top: 12px solid $roadside;
+  border-bottom: 14px solid $roadside;
+
+  transform: skewX(45deg);
+
+
+  &__guide-line {
+    position: relative;
+    top: calc(50% - 10px);
+    left: 0;
+
+    width: 500%;
+    height: 0;
+
+    border-bottom: 10px dashed $road-guide-line;
+
+    animation: road__guide-line $road-guide-line--speed linear infinite;
+  }
+}
+
+.earth {
+  width: 100%;
+  height: 20%;
+  position: relative;
+  top: -24px;
+
+  //background-color: $earth;
+  background-image:
+    url('./img/texture-grass.png'),
+    url('./img/texture-earth--level-1.png');
+  background-position:
+    0 0,
+    0 100%;
+  background-repeat: repeat-x;
+  background-size:
+    48px,
+    96px;
+
+  //background-image: url("http://static.colourlovers.com/images/patterns/6/6698.png?1197788412");
+  //background: linear-gradient(to top, #090401 50%, #4B1D06 100%);
+
+  .coffin {
+    padding: 1.25rem 0 0 1.25rem;
+    font-size: 5rem;
+  }
+}
+
+
+.sun {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+
+  display: inline-block;
+
+  font-size: 8rem;
+
+  animation: a--pulse 3s linear 0s infinite;
+}

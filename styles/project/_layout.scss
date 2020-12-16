@@ -1,0 +1,40 @@
+html {
+  box-sizing: border-box;
+  //scroll-behavior: smooth;
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+html,
+body {
+  height: 100%;
+}
+
+
+
+body {
+  position: relative;
+  //margin: 0;
+  //max-width: 100%;
+  //min-height: 100%;
+
+  //background-color: $body--background-color;
+}
+
+
+
+
+//
+//  Page
+//
+.l-page {
+  //display: block;
+  //margin-top: _space(1);
+  //margin-bottom: _space(2);
+}

@@ -1,0 +1,51 @@
+#car__wheel {
+  circle {
+    fill: var(--fill);
+  }
+
+  .outer {
+    stroke-width: 6;
+    //fill:   var(--fill-outer);
+    stroke: var(--stroke-outer);
+  }
+  .inner {
+    stroke-width: 2;
+    fill:   var(--fill-inner);
+    stroke: var(--stroke-inner);
+  }
+}
+
+
+
+
+.car__wheel {
+  &--A,
+  &--B {
+    width: 100px;
+    --fill: black;
+
+    --stroke-outer: black;
+
+    --fill-inner:   grey;
+    --stroke-inner: lightgrey;
+  }
+  /*
+  &--B {
+    width: 100px;
+
+    --fill: yellow;
+    --stroke-outer: blue;
+    --stroke-inner: red;
+  }
+  */
+}
+
+
+
+
+//
+//  Overwrite circle size
+//
+.eye__A {
+  //width: 300px;
+}
